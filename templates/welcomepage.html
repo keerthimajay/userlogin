@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    {% load static %}
+    <style>
+        body{
+            background: url(https://images.unsplash.com/photo-1432059964050-d4eba2ef368a?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h1 style="text-align: center; margin-top: 25px; color: black;">WELCOME 
+        <span style="color: white; font-family: 'poppins';font-size: 50px;">{{ user.username}}</span> </h1>
+
+    
+        <img src="{% static 'image/welcome.jpg' %}" alt="image" style="width: 400px; height: auto; margin-left: 600px; margin-top: 25px; border: 1px solid white; border-radius: 15px;">
+
+
+
+        <button style="margin-bottom: 5px; background-color: black; border-radius: 5px; margin-left: 300px;"><a style="color: white;text-decoration: none;" href="{% url 'logout' %}">LogOut</a></button>
+</body>
+</html>
